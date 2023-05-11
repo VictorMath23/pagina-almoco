@@ -1,77 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <title>Horario de almoço</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main>
+      <form method="POST" action="database/database.php">
         <table>
-            <tr>
-                <td>LINHA 1</td>
-                <td><input type="time" class="time"></td>
-                <td><input type="submit" class="ok" value="DEFINIR"></td>
-            </tr>
-            <tr>
-                <td>LINHA 2</td>
-                <td><input type="time" class="time"></td>
-                <td><input type="submit" class="ok" value="DEFINIR"></td>
-            </tr>
-            <tr>
-                <td>LINHA 3</td>
-                <td><input type="time" class="time"></td>
-                <td><input type="submit" class="ok" value="DEFINIR"></td>
-            </tr>
-            <tr>
-                <td>LINHA 4</td>
-                <td><input type="time" class="time"></td>
-                <td><input type="submit" class="ok" value="DEFINIR"></td>
-            </tr>
-            <tr>
-                <td>LINHA 5</td>
-                <td><input type="time" class="time"></td>
-                <td><input type="submit" class="ok" value="DEFINIR"></td>
-            </tr>
-            <tr>
-                <td>LINHA 6</td>
-                <td><input type="time" class="time"></td>
-                <td><input type="submit" class="ok" value="DEFINIR"></td>
-            </tr>
-            <tr>
-                <td>LINHA 7</td>
-                <td><input type="time" class="time"></td>
-                <td><input type="submit" class="ok" value="DEFINIR"></td>
-            </tr>
-            <tr>
-                <td>LINHA 8</td>
-                <td><input type="time" class="time"></td>
-                <td><input type="submit" class="ok" value="DEFINIR"></td>
-            </tr>
-            <tr>
-                <td>LINHA 9</td>
-                <td><input type="time" class="time"></td>
-                <td><input type="submit" class="ok" value="DEFINIR"></td>
-            </tr>
-            <tr>
-                <td>LINHA 10</td>
-                <td><input type="time" class="time"></td>
-                <td><input type="submit" class="ok" value="DEFINIR"></td>
-            </tr>
-            <tr>
-                <td>HIBRIDA</td>
-                <td><input type="time" class="time"></td>
-                <td><input type="submit" class="ok" value="DEFINIR"></td>
-            </tr>
-            <tr>
-                <td>SERVIDOR</td>
-                <td><input type="time" class="time"></td>
-                <td><input type="submit" class="ok" value="DEFINIR"></td>
-            </tr>
+          <tr>
+            <td data-id="1">LINHA 1</td>
+            <td>
+              <input data-id="1" type="time" name="horario" class="time" />
+            </td>
+            <td>
+              <input type="hidden" name="linha" value="LINHA 1" /><input
+                type="submit"
+                class="ok"
+                value="DEFINIR"
+                data-id="1"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td data-id="2">LINHA 2</td>
+            <td>
+              <input type="time" name="horario" class="time" data-id="2" />
+            </td>
+            <td>
+              <input type="hidden" name="linha" value="LINHA 2" /><input
+                type="submit"
+                class="ok"
+                value="DEFINIR"
+                data-id="2"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td data-id="3">LINHA 3</td>
+            <td>
+              <input type="time" name="horario" class="time" data-id="3" />
+            </td>
+            <td>
+              <input type="hidden" name="linha" value="LINHA 3" /><input
+                type="submit"
+                class="ok"
+                value="DEFINIR"
+                data-id="3"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td data-id="4">LINHA 4</td>
+            <td>
+              <input type="time" name="horario" class="time" data-id="4" />
+            </td>
+            <td>
+              <input type="hidden" name="linha" value="LINHA 4" /><input
+                type="submit"
+                class="ok"
+                value="DEFINIR"
+                data-id="4"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td data-id="5">LINHA 5</td>
+            <td>
+              <input type="time" name="horario" class="time" data-id="5" />
+            </td>
+            <td>
+              <input type="hidden" name="linha" value="LINHA 5" /><input
+                type="submit"
+                class="ok"
+                value="DEFINIR"
+                data-id="5"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td data-id="6">LINHA 6</td>
+            <td>
+              <input type="time" name="horario" class="time" data-id="6" />
+            </td>
+            <td>
+              <input type="hidden" name="linha" value="LINHA 6" /><input
+                type="submit"
+                class="ok"
+                value="DEFINIR"
+                data-id="6"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td data-id="7">LINHA 7</td>
+            <td>
+              <input type="time" name="horario" class="time" data-id="7" />
+            </td>
+            <td>
+              <input type="hidden" name="linha" value="LINHA 7" /><input
+                type="submit"
+                class="ok"
+                value="DEFINIR"
+                data-id="7"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td data-id="8">LINHA 8</td>
+            <td>
+              <input type="time" name="horario" class="time" data-id="8" />
+            </td>
+            <td>
+              <input type="hidden" name="linha" value="LINHA 8" /><input
+                type="submit"
+                class="ok"
+                value="DEFINIR"
+                data-id=""
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td data-id="9">LINHA 9</td>
+            <td>
+              <input type="time" name="horario" class="time" data-id="9" />
+            </td>
+            <td>
+              <input type="hidden" name="linha" value="LINHA 9" /><input
+                type="submit"
+                class="ok"
+                value="DEFINIR"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td data-id="10">LINHA 10</td>
+            <td>
+              <input type="time" name="horario" class="time" data-id="10" />
+            </td>
+            <td>
+              <input type="hidden" name="linha" value="LINHA 10" /><input
+                type="submit"
+                class="ok"
+                value="DEFINIR"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td data-id="11">HIBRIDA</td>
+            <td>
+              <input type="time" name="horario" class="time" data-id="11" />
+            </td>
+            <td>
+              <input type="hidden" name="linha" value="HIBRIDA" /><input
+                type="submit"
+                class="ok"
+                value="DEFINIR"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td data-id="12">SERVIDOR</td>
+            <td>
+              <input type="time" name="horario" class="time" data-id="12" />
+            </td>
+            <td>
+              <input type="hidden" name="linha" value="SERVIDOR" /><input
+                type="submit"
+                class="ok"
+                value="DEFINIR"
+              />
+            </td>
+          </tr>
         </table>
+      </form>
     </main>
-</body>
+    <script src="functions.js"></script>
+  </body>
 </html>
