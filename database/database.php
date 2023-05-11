@@ -8,27 +8,31 @@ $dbname = "h_almoco";
 // Cria a conexão com o banco de dados
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verifica se a conexão foi estabelecida com sucesso
+// Verifica se ocorreu um erro ao conectar
 if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
-}
-
-// Verifica se foi enviado algum dado através do método POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recupera os valores enviados pelo formulário
-    $linha = $_POST["linha"];
-    $horario = $_POST["horario"];
-
-    // Insere os valores na tabela do banco de dados
-    $sql =  "UPDATE h_almoco.almoco SET linha='$linha', horario= '$horario' WHERE linha = '$linha'";
-   
-    if ($conn->query($sql) === TRUE) {
-        echo "Dados inseridos com sucesso";
-    } else {
-        echo "Erro ao inserir dados: " . $conn->error;
-    }
-}
-
-// Fecha a conexão com o banco de dados
-$conn->close();
-?>
+    die('Erro de conexão (' . $conn->connect_errno . ') '
+        .$conn->connect_error);
+  }
+  
+  // Verifica se a tabela está vazia
+  $query = "SELECT COUNT(*) FROM h_almoco.almoco";
+  $result = $conn->query($query);
+  $row = $result->fetch_row();
+  if ($row[0] == 0) {
+    // Se a tabela estiver vazia, faz um insert
+    $query = "INSERT INTO h_almoco.almoco (linha, horario) VALUES (?, ?)";
+    $stmt =$conn->prepare($query);
+    $stmt->bind_param('ss', $_POST['linha'], $_POST['horario']);
+    $stmt->execute();
+  } else {
+    // Se a tabela não estiver vazia, faz um update
+    $query = "UPDATE h_almoco.almoco SET horario = ? WHERE linha = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param('ss', $_POST['horario'], $_POST['linha']);
+    $stmt->execute();
+  }
+  
+  // Fecha a conexão com o banco de dados
+  $conn->close();
+  
+  ?>
