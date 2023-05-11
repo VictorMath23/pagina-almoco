@@ -85,4 +85,28 @@ caption{
 }
 
 
+  form#revezamento{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Adiciona esta linha */
+    margin-top: 100px;
+    margin-left: 30px; /* corrigi o typo em margin-left */
+    color: white;
+}
+
+select{
+    height: 26px;
+    border-radius: 8%;
+    background-color: rgba(94, 94, 94, 0.564);
+    color: white;
+    font-weight: BOLD;
+    border: 1px solid black;
+    text-align: center;
+}
+
+select option{
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.66);
+}
 

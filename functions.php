@@ -20,25 +20,29 @@ for ($i = 1; $i <= 12; $i++) {
     $button_name = "linha{$i}";
     $horario_name = "horario{$i}";
     $linha_name = "Linha {$i}";
+    $valorSelecionado = $_POST['Revezamento'];
+    
 
     if (isset($_POST[$button_name])) {
         $horario = $_POST[$horario_name];
-        atualizar_horario($linha_name, $horario, $conn);
-        break; 
+        atualizar_horario($linha_name, $horario, $valorSelecionado, $conn);
+        break;
+       
+
+
     }
 }
 
 //atualiza o horário no banco
-function atualizar_horario($linha, $horario, $conn) {
-    $sql = "UPDATE almoco_manufatura SET horario = '$horario' WHERE linha = '$linha'";
+function atualizar_horario($linha, $horario, $valorSelecionado, $conn) {
+    $sql = "UPDATE almoco_manufatura SET horario = '$horario', revezamento = '$valorSelecionado' WHERE linha = '$linha'";
     if (mysqli_query($conn, $sql)) {
-        echo '<script>alert("Horário da ' . $linha . ' atualizado com sucesso!"); window.location.href = "http://localhost/Horario_almoco/index.html";</script>';
+        echo '<script>alert("Horário da ' . $linha . ' atualizado com sucesso! e vai revezar com a'.$valorSelecionado.'"); window.location.href = "http://localhost/Horario_almoco/index.html";</script>';
     } else {
         echo '<script>alert("Erro ao atualizar horário da ' . $linha . ': ' . mysqli_error($conn) . '"); window.location.href = "http://localhost/Horario_almoco/index.html";</script>';
-    }
-    
-
+    } 
 }
+
 
 
 mysqli_close($conn);
