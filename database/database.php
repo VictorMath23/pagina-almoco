@@ -20,7 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $horario = $_POST["horario"];
 
     // Insere os valores na tabela do banco de dados
-    $sql = "INSERT INTO almoco (linha, horario) VALUES ('$linha', '$horario')";
+    $sql =  "UPDATE h_almoco.almoco SET linha='$linha', horario= '$horario' WHERE linha = '$linha'";
+   
     if ($conn->query($sql) === TRUE) {
         echo "Dados inseridos com sucesso";
     } else {
