@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../page/horario_almoco.css">
+    <title>Horário de Almoço</title>
+</head>
+<body>
+    <main>
+        <div id="table-container">
+            <table id="my-table">
+                <thead>
+                    <tr>
+                        <td>Linha</td>
+                        <td>Horário</td>
+                        <td>Revezamento</td>
+                    </tr>
+                </thead>
+                <tbody >
+                    
+                </tbody>
+            </table>
+        </div>
+        
+    </main>
+    <script>
+        $(document).ready(function() {
+            // Faz uma requisição AJAX para buscar os dados da tabela
+         $.getJSON('../database/database.php', function(data) {
+                // Itera sobre os dados e adiciona as linhas na tabela
+                $.each(data, function(key, value) {
+                    var linha = $('<tr>');
+                    linha.append($('<td>').text(value.linha));
+                    linha.append($('<td>').text(value.horario));
+                    linha.append($('<td>').text(value.revezamento));
+                    $('#my-table > tbody').append(linha);
+                });
+            });
+        });
+        </script>
+</body>
+</html>

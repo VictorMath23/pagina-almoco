@@ -9,13 +9,15 @@ submitButtons.forEach(function (button) {
         var tr = event.target.closest("tr");
 
         // Obtém os inputs de cada td dentro do tr
-        var timeInput = tr.querySelector('input[name="horario"]');
-        var linhaInput = tr.querySelector('input[name="linha"]');
+        var timeInput = tr.querySelector('input[name="horario[]"]');
+        var linhaInput = tr.querySelector('input[name="linha[]"]');
+        var revezaSelect = tr.querySelector('select[name="reveza[]"]');
 
         // Cria um objeto FormData com os valores dos inputs
         var formData = new FormData();
-        formData.append("horario", timeInput.value);
-        formData.append("linha", linhaInput.value);
+        formData.append("horario[]", timeInput.value);
+        formData.append("linha[]", linhaInput.value);
+        formData.append("reveza[]", revezaSelect.value);
 
         // Faz uma requisição Ajax usando o método POST
         var xhr = new XMLHttpRequest();
@@ -25,5 +27,21 @@ submitButtons.forEach(function (button) {
             console.log(xhr.responseText);
         };
         xhr.send(formData);
+        var formData = new FormData();
+        formData.append("horario[]", timeInput.value);
+        formData.append("linha[]", linhaInput.value);
+        formData.append("reveza[]", revezaSelect.value);
+
+        // Faz uma requisição Ajax usando o método POST
+        $.ajax({
+            url: "http://localhost/pagina-almoco_/database/database.php",
+            type: "GET",
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("Erro: " + textStatus);
+            }
+        });
     });
 });
