@@ -9,7 +9,7 @@ $dbname = "mfg";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Consulta os horários de almoço
-$query = "SELECT linha, horario, revezamento FROM mfg.almoco_manufatura order by linha asc";
+$query = "SELECT linha, horario, revezamento FROM mfg.almoco_manufatura order by id asc";
 $result = $conn->query($query);
 
 // Cria um array para armazenar os horários de almoço
