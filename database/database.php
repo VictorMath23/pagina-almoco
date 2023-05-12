@@ -1,6 +1,4 @@
 <?php
-
-
 // Configuração do banco de dados
 $servername = "localhost";
 $username = "root";
@@ -11,7 +9,7 @@ $dbname = "mfg";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Consulta os horários de almoço
-$query = "SELECT linha, horario, revezamento FROM mfg.almoco_manufatura order by linha asc";
+$query = "SELECT linha, horario, revezamento FROM mfg.almoco_manufatura order by id asc";
 $result = $conn->query($query);
 
 // Cria um array para armazenar os horários de almoço
@@ -68,7 +66,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
       
     } else {
       // Se a linha existir, verifica se o revezamento é diferente do valor atual
-      $query = "SELECT revezamento, horario FROM mfg.almoco_manufatura WHERE linha = ?";
+      $query = "SELECT revezamento, horario FROM mfg.almoco_manufatura WHERE linha = ?;";
       $stmt = $conn->prepare($query);
       $stmt->bind_param('s', $linha);
       $stmt->execute();
