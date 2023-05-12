@@ -1,3 +1,4 @@
+
 // Seleciona todos os botões "submit" na página e adiciona um evento "click" a eles
 var submitButtons = document.querySelectorAll('input[type="submit"]');
 submitButtons.forEach(function (button) {
@@ -27,13 +28,10 @@ submitButtons.forEach(function (button) {
             console.log(xhr.responseText);
         };
         xhr.send(formData);
-<<<<<<< HEAD
-=======
 
         // Exibe uma mensagem de sucesso após o envio do formulário
-        alert("Horario da "+ linhaInput.value +" definido com sucesso!");
+        swal("Horario da " + linhaInput.value + " definido com sucesso!");
 
->>>>>>> 3ec8ccbf2c35d51403da36c17ca812aeaea16345
         var formData = new FormData();
         formData.append("horario[]", timeInput.value);
         formData.append("linha[]", linhaInput.value);
@@ -44,7 +42,6 @@ submitButtons.forEach(function (button) {
             url: "http://localhost/pagina-almoco_/database/database.php",
             type: "GET",
             success: function (data) {
-                console.log(data);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("Erro: " + textStatus);

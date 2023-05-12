@@ -40,6 +40,47 @@
                 });
             });
         });
+
+        function startPolling() {
+    setInterval(function () {
+        $.ajax({
+            url: "../database/database.php",
+            dataType: "json",
+            success: function (data) {
+                // Limpa a tabela atual
+                $('#my-table > tbody').empty();
+
+                // Itera sobre os novos dados e adiciona as linhas na tabela
+                $.each(data, function(key, value) {
+                    var linha = $('<tr>');
+                    linha.append($('<td>').text(value.linha));
+                    linha.append($('<td>').text(value.horario));
+                    linha.append($('<td>').text(value.revezamento));
+                    $('#my-table > tbody').append(linha);
+                });
+            }
+        });
+    }, 5000);
+}
+
+$(document).ready(function() {
+    // Faz uma requisição AJAX para buscar os dados da tabela
+    $.getJSON('../database/database.php', function(data) {
+        // Itera sobre os dados e adiciona as linhas na tabela
+        $.each(data, function(key, value) {
+            var linha = $('<tr>');
+            linha.append($('<td>').text(value.linha));
+            linha.append($('<td>').text(value.horario));
+            linha.append($('<td>').text(value.revezamento));
+            $('#my-table > tbody').append(linha);
+        });
+    });
+
+    // Inicia a atualização automática da tabela
+    startPolling();
+});
+
+
         </script>
 </body>
 </html>
