@@ -27,6 +27,13 @@ submitButtons.forEach(function (button) {
             console.log(xhr.responseText);
         };
         xhr.send(formData);
+<<<<<<< HEAD
+=======
+
+        // Exibe uma mensagem de sucesso após o envio do formulário
+        alert("Horario da "+ linhaInput.value +" definido com sucesso!");
+
+>>>>>>> 3ec8ccbf2c35d51403da36c17ca812aeaea16345
         var formData = new FormData();
         formData.append("horario[]", timeInput.value);
         formData.append("linha[]", linhaInput.value);
