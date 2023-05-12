@@ -1,3 +1,4 @@
+
 // Seleciona todos os botões "submit" na página e adiciona um evento "click" a eles
 var submitButtons = document.querySelectorAll('input[type="submit"]');
 submitButtons.forEach(function (button) {
