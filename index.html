@@ -8,7 +8,7 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <title>Horario de almoço</title>
+  <title>Horario de refeição</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -16,18 +16,15 @@
   <main>
     <form method="POST" action="database/database.php">
       <table>
-        <caption>HORARIO DE ALMOÇO MANUFATURA</caption>
+        <caption>HORARIO DE REFEIÇÃO MANUFATURA</caption>
         <tr>
           <td data-id="1">LINHA 1</td>
           <td>
-            <input data-id="1" type="time" name="horario[]" class="time" />
+            <input data-id="1" type="time" name="horario[]" class="time" value="" />
           </td>
           <td>
-            <input type="hidden" name="linha[]" value="LINHA 1" /><input type="submit" class="ok" value="DEFINIR"
-              data-id="1" />
-          </td>
-          <td data-id="1"><select name="reveza[]">
-              <option value="Sem revezamento">+ Revezamento</option>
+            <select name="reveza[]">
+              <option value="-">+ Revezamento</option>
               <option value="Linha 1">Retorno linha 1</option>
               <option value="Linha 2">Retorno linha 2</option>
               <option value="Linha 3">Retorno linha 3</option>
@@ -38,20 +35,20 @@
               <option value="Linha 8">Retorno linha 8</option>
               <option value="Linha 9">Retorno linha 9</option>
               <option value="Linha 10">Retorno linha 10</option>
-            </select></td>
+            </select>
+          </td>
+          <td><input type="hidden" name="linha[]" value="LINHA 1" /><input type="submit" class="ok" value="DEFINIR"
+            data-id="1" /></td>
 
         </tr>
         <tr>
           <td data-id="2">LINHA 2</td>
           <td>
-            <input type="time" name="horario[]" class="time" data-id="2" />
+            <input type="time" name="horario[]" class="time" data-id="2" value="" />
           </td>
           <td>
-            <input type="hidden" name="linha[]" value="LINHA 2" /><input type="submit" class="ok" value="DEFINIR"
-              data-id="2" />
-          </td>
-          <td data-id="2"><select name="reveza[]">
-              <option value=" ">+ Revezamento</option>
+            <select name="reveza[]">
+              <option value="-">+ Revezamento</option>
               <option value="Linha 1"> Retorno linha 1 </option>
               <option value="Linha 2"> Retorno linha 2 </option>
               <option value="Linha 3"> Retorno linha 3 </option>
@@ -62,20 +59,20 @@
               <option value="Linha 8"> Retorno linha 8 </option>
               <option value="Linha 9"> Retorno linha 9 </option>
               <option value="Linha 10">Retorno linha 10</option>
-            </select></td>
+            </select>
+          </td>
+          <td><input type="hidden" name="linha[]" value="LINHA 2" /><input type="submit" class="ok" value="DEFINIR"
+            data-id="2" /></td>
         </tr>
 
         <tr>
           <td data-id="3">LINHA 3</td>
           <td>
-            <input type="time" name="horario[]" class="time" data-id="3" />
+            <input type="time" name="horario[]" class="time" data-id="3" value=""/>
           </td>
           <td>
-            <input type="hidden" name="linha[]" value="LINHA 3" /><input type="submit" class="ok" value="DEFINIR"
-              data-id="3" />
-          </td>
-          <td><select name="reveza[]" data-id="3">
-              <option value=" ">+ Revezamento</option>
+            <select name="reveza[]" data-id="3">
+              <option value="-">+ Revezamento</option>
               <option value="Linha 1">Retorno linha 1</option>
               <option value="Linha 2">Retorno linha 2</option>
               <option value="Linha 3">Retorno linha 3</option>
@@ -86,19 +83,19 @@
               <option value="Linha 8">Retorno linha 8</option>
               <option value="Linha 9">Retorno linha 9</option>
               <option value="Linha 10">Retorno linha 10</option>
-            </select></td>
+            </select>
+          </td>
+          <td><input type="hidden" name="linha[]" value="LINHA 3" /><input type="submit" class="ok" value="DEFINIR"
+            data-id="3" /></td>
         </tr>
         <tr>
           <td data-id="4">LINHA 4</td>
           <td>
-            <input type="time" name="horario[]" class="time" data-id="4" />
+            <input type="time" name="horario[]" class="time" data-id="4" value=""/>
           </td>
           <td>
-            <input type="hidden" name="linha[]" value="LINHA 4" /><input type="submit" class="ok" value="DEFINIR"
-              data-id="4" />
-          </td>
-          <td><select name="reveza[]" data-id="4">
-              <option value=" ">+ Revezamento</option>
+            <select name="reveza[]" data-id="4">
+              <option value="-">+ Revezamento</option>
               <option value="Linha 1">Retorno linha 1</option>
               <option value="Linha 2">Retorno linha 2</option>
               <option value="Linha 3">Retorno linha 3</option>
@@ -109,20 +106,20 @@
               <option value="Linha 8">Retorno linha 8</option>
               <option value="Llinha 9">Retorno linha 9</option>
               <option value="Linha 10">Retorno linha 10</option>
-            </select></td>
+            </select>
+          </td>
+          <td><input type="hidden" name="linha[]" value="LINHA 4" /><input type="submit" class="ok" value="DEFINIR"
+            data-id="4" /></td>
         </tr>
 
         <tr>
           <td data-id="5">LINHA 5</td>
           <td>
-            <input type="time" name="horario[]" class="time" data-id="5" />
+            <input type="time" name="horario[]" class="time" data-id="5" value=""/>
           </td>
           <td>
-            <input type="hidden" name="linha[]" value="LINHA 5" /><input type="submit" class="ok" value="DEFINIR"
-              data-id="5" />
-          </td>
-          <td><select name="reveza[]" data-id="5">
-              <option value=" ">+ Revezamento</option>
+            <select name="reveza[]" data-id="5">
+              <option value="-">+ Revezamento</option>
               <option value="Linha 1">Retorno linha 1</option>
               <option value="Linha 2">Retorno linha 2</option>
               <option value="Linha 3">Retorno linha 3</option>
@@ -133,20 +130,20 @@
               <option value="Linha 8">Retorno linha 8</option>
               <option value="Linha 9">Retorno linha 9</option>
               <option value="Linha 10">Retorno linha 10</option>
-            </select></td>
+            </select>
+          </td>
+          <td><input type="hidden" name="linha[]" value="LINHA 5" /><input type="submit" class="ok" value="DEFINIR"
+            data-id="5" /></td>
         </tr>
 
         <tr>
           <td data-id="6">LINHA 6</td>
           <td>
-            <input type="time" name="horario[]" class="time" data-id="6" />
+            <input type="time" name="horario[]" class="time" data-id="6" value=""/>
           </td>
           <td>
-            <input type="hidden" name="linha[]" value="LINHA 6" /><input type="submit" class="ok" value="DEFINIR"
-              data-id="6" />
-          </td>
-          <td><select name="reveza[]" data-id="6">
-              <option value=" ">+ Revezamento</option>
+            <select name="reveza[]" data-id="6">
+              <option value="-">+ Revezamento</option>
               <option value="Linha 1">Retorno linha 1</option>
               <option value="Linha 2">Retorno linha 2</option>
               <option value="Linha 3">Retorno linha 3</option>
@@ -157,20 +154,20 @@
               <option value="Linha 8">Retorno linha 8</option>
               <option value="Linha 9">Retorno linha 9</option>
               <option value="Linha 10">Retorno linha 10</option>
-            </select></td>
+            </select>
+          </td>
+          <td><input type="hidden" name="linha[]" value="LINHA 6" /><input type="submit" class="ok" value="DEFINIR"
+            data-id="6" /></td>
         </tr>
 
         <tr>
           <td data-id="7">LINHA 7</td>
           <td>
-            <input type="time" name="horario[]" class="time" data-id="7" />
+            <input type="time" name="horario[]" class="time" data-id="7" value=""/>
           </td>
           <td>
-            <input type="hidden" name="linha[]" value="LINHA 7" /><input type="submit" class="ok" value="DEFINIR"
-              data-id="7" />
-          </td>
-          <td><select name="reveza[]" data-id="7">
-              <option value=" ">+ Revezamento</option>
+            <select name="reveza[]" data-id="7">
+              <option value="-">+ Revezamento</option>
               <option value="Linha 1">Retorno linha 1</option>
               <option value="Linha 2">Retorno linha 2</option>
               <option value="Linha 3">Retorno linha 3</option>
@@ -181,20 +178,20 @@
               <option value="Linha 8">Retorno linha 8</option>
               <option value="Linha 9">Retorno linha 9</option>
               <option value="Linha 10">Retorno linha 10</option>
-            </select></td>
+            </select>
+          </td>
+          <td><input type="hidden" name="linha[]" value="LINHA 7" /><input type="submit" class="ok" value="DEFINIR"
+            data-id="7" /></td>
         </tr>
 
         <tr>
           <td data-id="8">LINHA 8</td>
           <td>
-            <input type="time" name="horario[]" class="time" data-id="8" />
+            <input type="time" name="horario[]" class="time" data-id="8" value=""/>
           </td>
           <td>
-            <input type="hidden" name="linha[]" value="LINHA 8" /><input type="submit" class="ok" value="DEFINIR"
-              data-id="" />
-          </td>
-          <td><select name="reveza[]" data-id="8">
-              <option value=" ">+ Revezamento</option>
+            <select name="reveza[]" data-id="8">
+              <option value="-">+ Revezamento</option>
               <option value="Linha 1">Retorno linha 1</option>
               <option value="Linha 2">Retorno linha 2</option>
               <option value="Linha 3">Retorno linha 3</option>
@@ -205,19 +202,20 @@
               <option value="Linha 8">Retorno linha 8</option>
               <option value="Linha 9">Retorno linha 9</option>
               <option value="Linha 10">Retorno linha 10</option>
-            </select></td>
+            </select>
+          </td>
+          <td><input type="hidden" name="linha[]" value="LINHA 8" /><input type="submit" class="ok" value="DEFINIR"
+            data-id="8"/></td>
         </tr>
 
         <tr>
           <td data-id="9">LINHA 9</td>
           <td>
-            <input type="time" name="horario[]" class="time" data-id="9" />
+            <input type="time" name="horario[]" class="time" data-id="9" value=""/>
           </td>
           <td>
-            <input type="hidden" name="linha[]" value="LINHA 9" /><input type="submit" class="ok" value="DEFINIR" />
-          </td>
-          <td><select name="reveza[]" data-id="9">
-              <option value=" ">+ Revezamento</option>
+            <select name="reveza[]" data-id="9">
+              <option value="-">+ Revezamento</option>
               <option value="Linha 1">Retorno linha 1</option>
               <option value="Linha 2">Retorno linha 2</option>
               <option value="Linha 3">Retorno linha 3</option>
@@ -228,19 +226,19 @@
               <option value="Linha 8">Retorno linha 8</option>
               <option value="Linha 9">Retorno linha 9</option>
               <option value="Linha 10">Retorno linha 10</option>
-            </select></td>
+            </select>
+          </td>
+          <td><input type="hidden" name="linha[]" value="LINHA 9" /><input type="submit" class="ok" value="DEFINIR" /></td>
         </tr>
 
         <tr>
           <td data-id="10">LINHA 10</td>
           <td>
-            <input type="time" name="horario[]" class="time" data-id="10" />
+            <input type="time" name="horario[]" class="time" data-id="10" value=""/>
           </td>
           <td>
-            <input type="hidden" name="linha[]" value="LINHA-10" /><input type="submit" class="ok" value="DEFINIR" />
-          </td>
-          <td><select name="reveza[]" data-id="10">
-              <option value=" ">+ Revezamento</option>
+            <select name="reveza[]" data-id="10">
+              <option value="-">+ Revezamento</option>
               <option value="Linha 1">Retorno linha 1</option>
               <option value="Linha 2">Retorno linha 2</option>
               <option value="Linha 3">Retorno linha 3</option>
@@ -251,18 +249,18 @@
               <option value="Linha 8">Retorno linha 8</option>
               <option value="Linha 9">Retorno linha 9</option>
               <option value="Linha 10">Retorno linha 10</option>
-            </select></td>
+            </select>
+          </td>
+          <td><input type="hidden" name="linha[]" value="LINHA 10" /><input type="submit" class="ok" value="DEFINIR" /></td>
         </tr>
   <tr>
           <td data-id="11">HIBRIDA</td>
           <td>
-            <input type="time" name="horario[]" class="time" data-id="11" />
+            <input type="time" name="horario[]" class="time" data-id="11" value=""/>
           </td>
           <td>
-            <input type="hidden" name="linha[]" value="HIBRIDA" /><input type="submit" class="ok" value="DEFINIR" />
-          </td>
-          <td><select name="reveza[]" data-id="11">
-              <option value=" ">+ Revezamento</option>
+            <select name="reveza[]" data-id="11">
+              <option value="-">+ Revezamento</option>
               <option value="Linha 1">Retorno linha 1</option>
               <option value="Linha 2">Retorno linha 2</option>
               <option value="Linha 3">Retorno linha 3</option>
@@ -273,18 +271,18 @@
               <option value="Linha 8">Retorno linha 8</option>
               <option value="Linha 9">Retorno linha 9</option>
               <option value="Linha 10">Retorno linha 10</option>
-            </select></td>
+            </select>
+          </td>
+          <td><input type="hidden" name="linha[]" value="HIBRIDA" /><input type="submit" class="ok" value="DEFINIR" /></td>
           </tr>
          <tr>
            <td data-id="12">SERVIDOR</td>
           <td>
-            <input type="time" name="horario[]" class="time" data-id="12" />
+            <input type="time" name="horario[]" class="time" data-id="12" value=""/>
           </td>
           <td>
-            <input type="hidden" name="linha[]" value="SERVIDOR" /><input type="submit" class="ok" value="DEFINIR" />
-          </td>
-          <td><select name="reveza[]" data-id="12">
-              <option value=" ">+ Revezamento</option>
+            <select name="reveza[]" data-id="12">
+              <option value="-">+ Revezamento</option>
               <option value="Linha 1">Retorno linha 1</option>
               <option value="Linha 2">Retorno linha 2</option>
               <option value="Linha 3">Retorno linha 3</option>
@@ -295,8 +293,32 @@
               <option value="Linha 8">Retorno linha 8</option>
               <option value="Linha 9">Retorno linha 9</option>
               <option value="Linha 10">Retorno linha 10</option>
-            </select></td>
+            </select>
+          </td>
+          <td><input type="hidden" name="linha[]" value="SERVIDOR" /><input type="submit" class="ok" value="DEFINIR" /></td>
           </tr>
+          <tr>
+            <td data-id="13">TREINAMENTO</td>
+           <td>
+             <input type="time" name="horario[]" class="time" data-id="13" value=""/>
+           </td>
+           <td>
+             <select name="reveza[]" data-id="13">
+               <option value="-">+ Revezamento</option>
+               <option value="Linha 1">Retorno linha 1</option>
+               <option value="Linha 2">Retorno linha 2</option>
+               <option value="Linha 3">Retorno linha 3</option>
+               <option value="Linha 4">Retorno linha 4</option>
+               <option value="Linha 5">Retorno linha 5</option>
+               <option value="Linha 6">Retorno linha 6</option>
+               <option value="Linha 7">Retorno linha 7</option>
+               <option value="Linha 8">Retorno linha 8</option>
+               <option value="Linha 9">Retorno linha 9</option>
+               <option value="Linha 10">Retorno linha 10</option>
+             </select>
+           </td>
+           <td><input type="hidden" name="linha[]" value="TREINAMENTO" /><input type="submit" class="ok" value="DEFINIR" /></td>
+           </tr>
         
 
       </table>

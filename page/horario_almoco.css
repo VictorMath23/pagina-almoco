@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poller+One&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 
 * {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Staatliches', cursive;
   font-weight: bold;
   text-transform: uppercase;
   padding: 0;
