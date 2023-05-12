@@ -27,7 +27,7 @@ main{
 
 table{ 
     width: 550px;
-    height: 600px; 
+    height: 550px; 
     border: 1px solid black;   
     border-collapse: collapse;
     text-align: center;
@@ -36,11 +36,13 @@ table{
     backdrop-filter: blur( 1.5px );
     color: white;
     
+    
 }
 
 td{
     border: 1px solid black;
     font-weight: bold;
+    
     
     
 }
@@ -100,6 +102,7 @@ select{
     border-radius: 8%;
     background-color: rgba(94, 94, 94, 0.564);
     color: white;
+    cursor: pointer;
     font-weight: BOLD;
     border: 1px solid black;
     text-align: center;
